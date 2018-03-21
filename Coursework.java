@@ -10,6 +10,8 @@ public class Coursework implements ActionListener {
   Icon tempStore1 = new ImageIcon();
   JButton[] button = new JButton[12];                                    /** creates an array of JButtons */
   ImageIcon[] imageArray = new ImageIcon[12];                            /** creates the array of imageIcons */
+  private int xYValue;
+  private int clickedXYValue;
 
   public Coursework() {
 
@@ -48,11 +50,18 @@ public class Coursework implements ActionListener {
              for(int counter2 =0; counter2<12; counter2++) {
 
                if(button[counter2].getIcon() == imageArray[0]) {
-           
-                 tempStore = button[counter2].getIcon();
-                 tempStore1 = button[counter1].getIcon();
-                 button[counter2].setIcon(tempStore1);
-                 button[counter1].setIcon(tempStore);
+                    
+                 clickedXYValue = counter1;
+                 xYValue = counter2;
+                            
+                   if(clickedXYValue == xYValue + 1 || clickedXYValue == xYValue - 1 || clickedXYValue == xYValue + 4 || clickedXYValue == xYValue - 4) {
+                   
+                     tempStore = button[counter2].getIcon();             /** stores the blank image */
+                     tempStore1 = button[counter1].getIcon();            /** stores the clicked button's image */
+                     button[counter2].setIcon(tempStore1);               /** sets the blank image to the clicked one */
+                     button[counter1].setIcon(tempStore);                /** sets the clicked image to the blank one */
+
+                   }
 
                }
 
