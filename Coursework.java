@@ -54,7 +54,7 @@ public class Coursework implements ActionListener {
                  clickedXYValue = counter1;
                  xYValue = counter2;
                             
-                   if(clickedXYValue == xYValue + 1 || clickedXYValue == xYValue - 1 || clickedXYValue == xYValue + 4 || clickedXYValue == xYValue - 4) {
+                   if(clickedXYValue == xYValue + 1 || clickedXYValue == xYValue - 1 || clickedXYValue == xYValue + 4 || clickedXYValue == xYValue - 4) {  /** sets the condition that the button will only change if it is next to the blank square */
                    
                      tempStore = button[counter2].getIcon();             /** stores the blank image */
                      tempStore1 = button[counter1].getIcon();            /** stores the clicked button's image */
